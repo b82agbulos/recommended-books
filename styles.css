@@ -1,0 +1,111 @@
+:root {
+    --woocommerce: #7F54B3;
+    --wc-green: #7ad03a;
+    --wc-red: #a00;
+    --wc-orange: #ffba00;
+    --wc-blue: #2ea2cc;
+    --wc-primary: #7F54B3;
+    --wc-primary-text: white;
+    --wc-secondary: #e9e6ed;
+    --wc-secondary-text: #515151;
+    --wc-highlight: #b3af54;
+    --wc-highligh-text: white;
+    --wc-content-bg: #fff;
+    --wc-subtext: #767676;
+    --wp--preset--font-size--normal: 16px;
+    --wp--preset--font-size--huge: 42px;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    font-size: var(--wp--preset--font-size--normal);
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    color: var(--wc-secondary-text);
+    background-color: var(--wc-content-bg);
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.book-entry {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--wc-secondary);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.author-info {
+    margin-bottom: 1em;
+}
+
+.author-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    margin-top: 0.5em;
+    font-size: 1.8rem;
+    color: var(--wc-primary);
+}
+
+.book-info {
+    width: 100%;
+}
+
+.book-title {
+    margin-bottom: 0.25em;
+    font-size: 2rem;
+    color: var(--wc-secondary-text);
+}
+
+.publication-year {
+    font-style: italic;
+    color: var(--wc-subtext);
+}
+
+@media (min-width: 768px) {
+    .book-entry {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .author-info {
+        margin-right: 2em;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Mobile-specific styles can go here */
+}
