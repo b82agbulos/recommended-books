@@ -42,13 +42,66 @@ body {
     background: linear-gradient(to bottom, #92adc8, #1d3142);
     background-attachment: fixed;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#primary.content-area {
+    padding: 20px;
+}
+
+.recommendations-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: var(--wc-content-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.main-title {
+    font-size: 3.2rem;
+    color: var(--wc-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--wc-primary);
+    padding-bottom: 10px;
+}
+
+.recommendation-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    color: var(--wc-primary);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--wc-highlight);
+    padding-left: 10px;
+}
+
+.section-content {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--wc-secondary-text);
+}
+
+.link {
+    color: var(--wc-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--wc-highlight);
+    text-decoration: underline;
 }
 
 .book-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .book-entry {
@@ -97,55 +150,11 @@ body {
     color: var(--wc-subtext);
 }
 
-/* Styles for recommended books section */
-.recommendations-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: var(--wc-content-bg);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.main-title {
-    font-size: 3.2rem;
-    color: var(--wc-primary);
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 2px solid var(--wc-primary);
-    padding-bottom: 10px;
-}
-
-.recommendation-section {
-    margin-bottom: 40px;
-}
-
-.section-title {
-    font-size: 2.4rem;
-    color: var(--wc-primary);
-    margin-bottom: 20px;
-    border-left: 4px solid var(--wc-highlight);
-    padding-left: 10px;
-}
-
-.section-content {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    color: var(--wc-secondary-text);
-}
-
-.link {
-    color: var(--wc-blue);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.link:hover {
-    color: var(--wc-highlight);
-    text-decoration: underline;
-}
-
 @media (min-width: 768px) {
+    #primary.content-area {
+        padding: 40px;
+    }
+
     .book-entry {
         flex-direction: row;
         text-align: left;
@@ -158,6 +167,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    #primary.content-area {
+        padding: 10px;
+    }
+
     .recommendations-container {
         padding: 20px;
     }
