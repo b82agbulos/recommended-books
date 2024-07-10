@@ -39,7 +39,9 @@ body {
     line-height: 1.5;
     font-family: Arial, sans-serif;
     color: var(--wc-secondary-text);
-    background-color: var(--wc-secondary);
+    background: linear-gradient(to bottom, #92adc8, #1d3142);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .book-list {
