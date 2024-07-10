@@ -4,9 +4,9 @@
     --wc-red: #a00;
     --wc-orange: #ffba00;
     --wc-blue: #2ea2cc;
-    --wc-primary: #3c5265;
+    --wc-primary: #1f3444;
     --wc-primary-text: white;
-    --wc-secondary: #f6f4f9;
+    --wc-secondary: #e9e6ed;
     --wc-secondary-text: #515151;
     --wc-highlight: #b3af54;
     --wc-highligh-text: white;
@@ -39,7 +39,7 @@ body {
     line-height: 1.5;
     font-family: Arial, sans-serif;
     color: var(--wc-secondary-text);
-    background-color: var(--wc-content-bg);
+    background-color: var(--wc-secondary);
 }
 
 .book-list {
@@ -57,9 +57,10 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--wc-secondary);
+    background-color: var(--wc-content-bg);
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .author-info {
@@ -94,6 +95,54 @@ body {
     color: var(--wc-subtext);
 }
 
+/* Styles for recommended books section */
+.recommendations-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: var(--wc-content-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.main-title {
+    font-size: 3.2rem;
+    color: var(--wc-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--wc-primary);
+    padding-bottom: 10px;
+}
+
+.recommendation-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    color: var(--wc-primary);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--wc-highlight);
+    padding-left: 10px;
+}
+
+.section-content {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--wc-secondary-text);
+}
+
+.link {
+    color: var(--wc-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--wc-highlight);
+    text-decoration: underline;
+}
+
 @media (min-width: 768px) {
     .book-entry {
         flex-direction: row;
@@ -106,6 +155,20 @@ body {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    /* Mobile-specific styles can go here */
+@media (max-width: 768px) {
+    .recommendations-container {
+        padding: 20px;
+    }
+
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-content {
+        font-size: 1.4rem;
+    }
 }
